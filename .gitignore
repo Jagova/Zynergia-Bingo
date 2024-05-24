@@ -11,7 +11,7 @@ firebase-debug.*.log*
 .firebase/
 
 # Firebase config
-firebaserc
+.firebaserc
 firebase.json
 
 # Uncomment this if you'd like others to create their own Firebase project.
