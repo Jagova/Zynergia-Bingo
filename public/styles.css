@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.bingo-board {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    padding-top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+.bingo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.bingo-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #61dafb;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#generate-btn,
+#reset-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#generate-btn:hover,
+#reset-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bingo-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #bbb;
+    /* Color inicial apagado */
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.bingo-number.active {
+    background-color: #EB4C8C;
+    /* Rojo */
+    color: #fff;
+    /* Blanco */
+}
+
+#confirm-modal {
+    display: none;
+}
+
+/* Estilos para el historial de fichas */
+.bingo-history {
+    margin-bottom: 10px;
+}
+
+.bingo-history-item {
+    display: inline-block;
+    background-color: #005585;
+    /* Azul fuerte */
+    color: #fff;
+    /* Blanco */
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el título */
+h1 {
+    color: #EB4C8C;
+    /* Rojo */
+}
+
+/* Colores de las letras del tablero */
+.bingo-letter-container .bingo-number {
+    font-weight: bold;
+}
+
+.B {
+    color: rgb(142, 73, 136);
+    /* Morado */
+}
+
+.I {
+    color: rgb(235, 76, 140);
+    /* Rojo */
+}
+
+.N {
+    color: rgb(255, 204, 0);
+    /* Amarillo */
+}
+
+.G {
+    color: rgb(161, 193, 49);
+    /* Verde */
+}
+
+.O {
+    color: rgb(83, 198, 243);
+    /* Azul claro */
+}
+
+/* Estilos para la primera ficha de cada fila */
+.bingo-letter {
+    font-size: 1.4em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Estilos para el loading */
+#loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1000;
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #005585;
+    /* Azul fuerte */
+    border-top: 5px solid #fff;
+    /* Blanco */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Estilos para la ficha en la pantalla */
+.pantalla {
+    margin: 20px auto;
+    width: 200px;
+    height: 100px;
+    border: 2px solid #333;
+    /* Borde como estaba antes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    /* Tamaño de la letra aumentado */
+    font-weight: bold;
+    color: #005585;
+    /* Color azul fuerte */
+}
+
+.img-logo {
+    width: 200px; /* Ajusta el ancho según sea necesario */
+    position: relative;
+    margin-right: 10px; /* Ajusta el margen derecho para separar la imagen del texto */
+}
+
+h1 {
+    font-size: 50px; /* Ajusta el tamaño del texto según sea necesario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+h1 span{
+    margin-top: 78px;
+}

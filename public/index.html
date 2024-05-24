@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zynergia Bingo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="bingo-board">
+        <h1><img src="./assets/logo.jpg" alt="" class="img-logo"> <span
+                style="color: #EB4C8C; font-size: 48px;">Bingo</span></h1>
+        <!-- Título más grande -->
+        <!-- Agregar la imagen del logo -->
+        <div id="bingo-history" class="bingo-history"></div>
+        <div id="bingo-grid" class="bingo-grid">
+            <!-- Aquí se prellenarán todas las fichas -->
+        </div>
+        <div id="pantalla" class="pantalla"></div>
+        <button id="generate-btn">Sacar Ficha</button>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="modal-text"></p>
+            </div>
+        </div>
+        <button id="reset-btn">Reiniciar</button>
+        <div id="confirm-modal" class="modal">
+            <div class="modal-content">
+                <p>¿Estás seguro de que deseas reiniciar el juego?</p>
+                <button id="confirm-reset-btn">Sí</button>
+                <button id="cancel-reset-btn">Cancelar</button>
+            </div>
+        </div>
+        <div id="loading">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
